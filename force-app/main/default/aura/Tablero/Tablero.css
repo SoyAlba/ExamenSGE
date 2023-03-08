@@ -1,0 +1,46 @@
+.THIS {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+
+  }
+  
+  .THIS h1 {
+    margin-top: 0;
+    font-style: oblique;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333cb3;
+  }
+  
+  .THIS hr {
+    border: none;
+    border-top: 1px solid #a3a3a3;
+    margin: 20px 0;
+  }
+  
+  .THIS .button{
+    background-color: #333cb3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-self: center;
+  }
+  
+  .THIS .div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    align-self: center;
+  }

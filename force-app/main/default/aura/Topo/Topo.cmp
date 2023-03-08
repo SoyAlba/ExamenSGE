@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="id" type="Integer" required="true"/>
+    <aura:attribute name="color" type="String" default="white"/>
+    <aura:attribute name="seleccionado" type="Boolean" default="false"/>
+    <aura:attribute name="componentTablero" type="Aura.component"></aura:attribute>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.inicializar}"/>
+    
+    <button aura:id="topo" class="pulsador" style="{!'background-color:' + v.color}" onclick="{!c.pulsar}"></button>
+</aura:component>

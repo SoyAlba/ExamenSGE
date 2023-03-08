@@ -1,0 +1,38 @@
+<aura:component controller="RandomNumController">
+    <aura:attribute name="pulsadores" type="Object[]" default="[
+        {'id': 0, 'color': 'white', 'seleccionado': false},
+        {'id': 1, 'color': 'white', 'seleccionado': false},
+        {'id': 2, 'color': 'white', 'seleccionado': false},
+        {'id': 3, 'color': 'white', 'seleccionado': false},
+        {'id': 4, 'color': 'white', 'seleccionado': false},
+        {'id': 5, 'color': 'white', 'seleccionado': false},
+        {'id': 6, 'color': 'white', 'seleccionado': false},
+        {'id': 7, 'color': 'white', 'seleccionado': false}
+        
+    ]" />
+    <aura:attribute name="contador" type="Integer" default="0" />
+    <aura:attribute name="jugando" type="Boolean" default="false" />
+    <aura:registerEvent name="pulsadorSeleccionado" type="c:PulsadorSeleccionado" />
+    <aura:handler name="init" value="{!this}" action="{!c.iniciar}" />
+
+    <h1 class="slds-text-heading_large slds-text-align_center">Juego de Memoria</h1>
+    
+    <aura:if isTrue="{!v.jugando}">
+        <h2 class="slds-text-heading_medium slds-truncate">¿Qué pulsador se iluminó?</h2>
+    </aura:if>
+    <hr />
+    <div class="div">
+        <aura:iteration items="{!v.pulsadores}" var="Topo">
+            <c:Topo id="{!Topo.id}" color="{!Topo.color}" seleccionado="{!Topo.seleccionado}" aura:id="Topo" />
+        </aura:iteration>
+    </div>
+    <hr />
+    <button class="button " onclick="{!c.iniciarJuego}">PLAY</button>
+    <button class="button " onclick="{!c.detenerJuego}">STOP</button>
+
+    <br />
+    <h2 class="slds-text-heading_medium">Contador: {!v.contador}</h2>
+
+
+
+</aura:component>
