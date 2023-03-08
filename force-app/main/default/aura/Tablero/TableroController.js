@@ -6,10 +6,13 @@
         helper.iniciarJuego(component);
     },
     detenerJuego: function(component, event, helper) {
-        helper.detenerJuego(component);
+        var intentos = component.get("v.contador");
+        var mensaje = "Has acertado " + intentos + " veces";
+
+        window.alert(mensaje);
     },
     manejarPulsadorSeleccionado: function(component, event, helper) {
         var Topo = event.getParam("Topo");
-        helper.manejarPulsadorSeleccionado(Topo);
+        
     }
 })

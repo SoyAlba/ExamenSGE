@@ -59,7 +59,6 @@
         this.generarNumeroAleatorio(component);
     },
     detenerJuego : function(component, event, helper) {
-        component.set("v.jugando", false);
         var pulsadores = component.get("v.pulsadores");
         for (var i = 0; i < pulsadores.length; i++) {
             pulsadores[i].color = "white";
